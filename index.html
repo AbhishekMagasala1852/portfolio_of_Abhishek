@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,28 +8,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
   :root {
-    --bg: #0a0a0a;
-    --bg2: #111111;
-    --bg3: #1a1a1a;
+    --bg: #181212;
+    --bg2: transparent;
+    --bg3: transparent;
     --border: #222222;
     --lime: #c8f135;
     --gray: #888888;
     --gray2: #555555;
     --white: #f0f0f0;
-    --card: #141414;
+    --card: transparent;
     --font-main: 'Space Grotesk', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
   }
   [data-theme="light"] {
     --bg: #f5f5f0;
-    --bg2: #eeeeea;
-    --bg3: #e5e5e0;
+    --bg2: transparent;
+    --bg3: transparent;
     --border: #d0d0cc;
     --lime: #5a8a00;
     --gray: #555555;
     --gray2: #888888;
     --white: #111111;
-    --card: #ebebе6;
+    --card: transparent;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -45,12 +46,12 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 1rem 5%;
-    background: rgba(10,10,10,0.85);
+    background: transparent;
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     transition: background 0.3s;
   }
-  [data-theme="light"] nav { background: rgba(245,245,240,0.85); }
+  [data-theme="light"] nav { background: transparent; }
   .nav-logo {
     font-family: var(--font-mono);
     font-size: 0.9rem;
@@ -321,7 +322,7 @@
   .proj-year {
     font-family: var(--font-mono);
     font-size: 0.7rem; color: var(--lime);
-    background: rgba(200,241,53,0.08);
+    background: transparent;
     padding: 0.2rem 0.55rem;
     border-radius: 20px;
   }
@@ -453,6 +454,26 @@
     .reveal { opacity: 1; transform: none; transition: none; }
     html { scroll-behavior: auto; }
   }
+
+  /* ── TRANSPARENT SURFACES ── */
+  .skill-card,
+  .exp-card,
+  .proj-card,
+  .edu-card,
+  .ach-item,
+  .contact-card,
+  .pill,
+  .exp-duration,
+  .proj-year,
+  .proj-tech,
+  #skills,
+  #achievements,
+  nav {
+    background: transparent;
+  }
+
+  /* Buttons intentionally keep their existing backgrounds. */
+
 </style>
 </head>
 <body>
@@ -830,5 +851,6 @@
     });
   });
 </script>
+<script src="scroll-animation.js"></script>
 </body>
 </html>
